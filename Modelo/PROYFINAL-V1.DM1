@@ -31,7 +31,7 @@ VersionId,Version_ID,Copyright,Global_User_ID,Row_Time_Stamp
 
 Diagram
 DiagramId,Version_ID,VersionId,LastUpdate,CreateDate,ActiveModel,ActiveSubmodel,VSplitterPosition,X,Y,Width,Height,DiagramNameId,AuthorId,CompanyId,VersionNoId,CopyrightStringId,DefinitionId,UnificationOptionId,FileNameId,CopyrightYearStringId,DiagramName,CodePage,SignatureGUID,ReleaseName,Flags,Global_User_ID,Row_Time_Stamp
-1,1,800,12/27/2021 15:04:29G,12/23/2021 13:31:42G,1,1,180,0,0,0,0,143,144,144,145,144,0,146,143,0,PROYFINAL-V1.DM1,1252,NULL,NULL,0,1,0
+1,1,800,12/27/2021 15:51:39G,12/23/2021 13:31:42G,1,1,180,0,0,0,0,143,144,144,145,144,0,146,143,0,PROYFINAL-V1.DM1,1252,NULL,NULL,0,1,0
 
 Model
 DiagramId,ModelId,Model_ID,ModelType,PlatformId,NamePrefix,SpaceHandling,CaseHandling,GenPrimaryKey,GenAlternateKey,GenInversionEntry,GenForeignKey,Notation,ModelNameId,RowOverhead,TableOverhead,IndexOverhead,BlobOverhead,BlobBlockSize,Global_User_ID,Row_Time_Stamp
@@ -66,7 +66,7 @@ SubmodelLink_ID,Model_ID,Parent_ID,Child_ID,UltimateParent_ID,NodeLevel,IsBottom
 
 DiagramDisplay
 DiagramId,ModelId,SubmodelId,DiagramDisplay_ID,Submodel_ID,PlatformId,Animate,ZoomFactor,HviewSize,VviewSize,HorizontalScrollPosition,VerticalScrollPosition,PageOrientation,PageSize,DisplayFormat,EntityDisplayInfo,ViewDisplayFormat,ViewDisplayInfo,Shadow,CompleteRoleName,ShowVerbs,ShowCardinality,MethodologyId,StraightRelLine,PageBoundary,ShowViewRelationship,ShowView,HideTrigger,Global_User_ID,Row_Time_Stamp,ShowSchemaObjEdge,ShowSchemaObj,SchemaObjDisplayFormat,ShowRelationshipName,ShowLogicalRelationshipName,ShowTriggerLabel,ShowShape,ShowShapeEdge,ShowShapeName,ShowShapeEdgeName,ShowShapeEdgeVerbs,TransformationDisplayFormat
-1,1,1,1,1,0,0,7642,0,0,-202,-429,2,1,8,3269,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
+1,1,1,1,1,0,0,16381,0,0,-329,-970,2,1,8,3269,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
 
 GridDisplay
 DiagramId,ModelId,SubmodelId,GridDisplay_ID,Submodel_ID,Show,Snap,HorizontalSpacing,VerticalSpacing,HorizontalGridsPerLine,VericalGridsPerLine,Units,Global_User_ID,Row_Time_Stamp
@@ -291,7 +291,7 @@ DiagramId,ModelId,EntityId,Entity_ID,Model_ID,EntityNameId,TableNameId,Definitio
 1,1,8,8,1,58,58,0,0,0,0,0,0,0,0,0,216,0
 1,1,9,9,1,71,71,0,0,0,0,0,0,0,0,0,244,0
 1,1,10,10,1,76,76,0,0,0,0,0,0,0,0,0,255,0
-1,1,11,11,1,84,84,0,0,0,0,0,0,0,0,0,268,0
+1,1,11,11,1,175,175,0,0,0,0,0,0,0,0,0,268,0
 1,1,12,12,1,89,89,0,0,0,0,0,0,0,0,0,288,0
 1,1,13,13,1,95,95,0,0,0,0,0,0,0,0,0,306,0
 1,1,14,14,1,100,100,0,0,0,0,0,0,0,0,0,345,0
@@ -645,7 +645,7 @@ DiagramId,ModelId,SubmodelId,RelationshipId,RelationshipDisplay_ID,ForeignKey_ID
 1,1,1,10,10,10,1,5000,N,N,0,0,0,0,0,3,0,-147,-25,0,0,179,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,228,0
 1,1,1,11,11,11,1,5000,N,N,0,0,0,0,0,3,0,-147,-48,0,0,179,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,232,0
 1,1,1,12,12,12,1,5000,N,N,0,0,0,0,0,3,0,-209,-33,0,0,-42,119,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,236,0
-1,1,1,13,13,13,1,5000,N,N,0,0,0,0,0,3,0,-165,54,0,0,130,-50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,278,0
+1,1,1,13,13,13,1,5000,N,N,0,0,0,0,0,3,0,-165,54,0,0,129,-50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,278,0
 1,1,1,14,14,14,1,5000,N,N,0,0,0,0,0,3,0,-134,-102,0,0,-165,-51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,285,0
 1,1,1,20,20,20,1,5000,N,N,0,0,0,0,0,3,0,152,14,0,0,-165,-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,330,0
 1,1,1,21,21,21,1,5000,N,N,0,0,0,0,0,3,0,155,-8,0,0,-180,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,334,0
@@ -676,7 +676,7 @@ Path_Node_ID,RelationshipDisplay_ID,View_Relationship_Display_ID,SupertypeDispla
 6,12,0,0,0,0,0,157,-487,1
 7,12,0,0,0,0,0,157,-729,2
 8,12,0,0,0,0,0,624,-729,3
-9,13,0,0,0,0,0,92,-1223,1
+9,13,0,0,0,0,0,90,-1223,1
 10,14,0,0,0,0,0,183,-1405,1
 11,14,0,0,0,0,0,118,-1405,2
 12,14,0,0,0,0,0,118,-1328,3
@@ -771,34 +771,33 @@ Lineage_Stream_Display_ID,Lineage_Stream_ID,Submodel_ID,DesiredRoutingStyle,Pare
 
 SmallString
 String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
-158,PK13,0,0,0
-159,PK14,0,0,0
-1,Main,0,0,0
-2,Diagram specific data dictionary.,0,0,0
 160,PK15,0,0,0
-3,Logical,0,0,0
+1,Main,0,0,0
 161,PK20,0,0,0
-4,Main Model,0,0,0
+2,Diagram specific data dictionary.,0,0,0
 162,PK22,0,0,0
-5,Data Movement Rules,0,0,0
+3,Logical,0,0,0
 163,PK23,0,0,0
+4,Main Model,0,0,0
 164,PK24,0,0,0
-7,Y,0,0,0
+5,Data Movement Rules,0,0,0
 165,PK25,0,0,0
-8,AERONAVE,0,0,0
-9,VAR,0,0,0
+7,Y,0,0,0
 167,ROL_EMPLEADO,0,0,0
-10,NUM,0,0,0
+8,AERONAVE,0,0,0
 168,ROL_EMPLEADO_ID,0,0,0
-11,AERONAVE_ID,0,0,0
-12,MATRICULA,0,0,0
+9,VAR,0,0,0
+10,NUM,0,0,0
 170,PK26,0,0,0
-13,VBN,0,0,0
+11,AERONAVE_ID,0,0,0
 171,BODEGA_ANCHO,0,0,0
-14,ESPECIFICACIONES_TECNICAS,0,0,0
+12,MATRICULA,0,0,0
 172,BODEGA_PROFUNDIDAD,0,0,0
-15,MODELO,0,0,0
+13,VBN,0,0,0
 173,BODEGA_ALTO,0,0,0
+14,ESPECIFICACIONES_TECNICAS,0,0,0
+175,REFERENCIAS_EMPLEADO,0,0,0
+15,MODELO,0,0,0
 21,CAPACIDAD_PASAJEROS_ORDINARIOS,0,0,0
 22,CAPACIDAD_PASAJEROS_VIP,0,0,0
 23,CAPACIDAD_PASAJEROS_DISCAPACITADOS,0,0,0
@@ -849,7 +848,6 @@ String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
 79,FOTO,0,0,0
 82,NUMERO,0,0,0
 83,URL,0,0,0
-84,DIRECCION_INTERNET_EMPLEADO_HISTORIAL,0,0,0
 85,PUNTOS,0,0,0
 86,JEFE,0,0,0
 89,VUELO_PASAJERO,0,0,0
@@ -898,6 +896,8 @@ String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
 155,PK10,0,0,0
 156,PK11,0,0,0
 157,PK12,0,0,0
+158,PK13,0,0,0
+159,PK14,0,0,0
 
 LargeString
 String_Id,Data,Row_Time_Stamp
@@ -1032,8 +1032,8 @@ StringUsage_Id,UniqueObject_Id,StringUsageType_Id,String_Id,Row_Time_Stamp
 150,265,15,55,0
 151,266,14,79,0
 152,266,15,79,0
-153,268,1,84,0
-154,268,2,84,0
+153,268,1,175,0
+154,268,2,175,0
 155,275,14,82,0
 156,275,15,82,0
 157,279,15,77,0
@@ -1510,7 +1510,7 @@ Identity_Value_ID,Table_Name,Column_Name,Next_Valid_Value,Global_User_ID,Row_Tim
 14,Bound_Dictionary_Object,Bound_Dictionary_Object_ID,1,0,0
 15,CheckConstraints,CheckConstraints_ID,1,0,0
 16,Circular_Layout,Circular_Layout_ID,47,0,0
-17,ColorDefault,ColorDefault_ID,2422,0,0
+17,ColorDefault,ColorDefault_ID,2424,0,0
 18,Column_Usage,Column_Usage_ID,1,0,0
 19,Components_Layout,Components_Layout_ID,47,0,0
 20,Configuration_Option,Configuration_Option_ID,1,0,0
