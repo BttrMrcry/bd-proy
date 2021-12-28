@@ -31,7 +31,7 @@ VersionId,Version_ID,Copyright,Global_User_ID,Row_Time_Stamp
 
 Diagram
 DiagramId,Version_ID,VersionId,LastUpdate,CreateDate,ActiveModel,ActiveSubmodel,VSplitterPosition,X,Y,Width,Height,DiagramNameId,AuthorId,CompanyId,VersionNoId,CopyrightStringId,DefinitionId,UnificationOptionId,FileNameId,CopyrightYearStringId,DiagramName,CodePage,SignatureGUID,ReleaseName,Flags,Global_User_ID,Row_Time_Stamp
-1,1,800,12/27/2021 15:51:39G,12/23/2021 13:31:42G,1,1,180,0,0,0,0,143,144,144,145,144,0,146,143,0,PROYFINAL-V1.DM1,1252,NULL,NULL,0,1,0
+1,1,800,12/27/2021 22:06:26G,12/23/2021 13:31:42G,1,1,180,0,0,0,0,143,144,144,145,144,0,146,143,0,PROYFINAL-V1.DM1,1252,NULL,NULL,0,1,0
 
 Model
 DiagramId,ModelId,Model_ID,ModelType,PlatformId,NamePrefix,SpaceHandling,CaseHandling,GenPrimaryKey,GenAlternateKey,GenInversionEntry,GenForeignKey,Notation,ModelNameId,RowOverhead,TableOverhead,IndexOverhead,BlobOverhead,BlobBlockSize,Global_User_ID,Row_Time_Stamp
@@ -66,7 +66,7 @@ SubmodelLink_ID,Model_ID,Parent_ID,Child_ID,UltimateParent_ID,NodeLevel,IsBottom
 
 DiagramDisplay
 DiagramId,ModelId,SubmodelId,DiagramDisplay_ID,Submodel_ID,PlatformId,Animate,ZoomFactor,HviewSize,VviewSize,HorizontalScrollPosition,VerticalScrollPosition,PageOrientation,PageSize,DisplayFormat,EntityDisplayInfo,ViewDisplayFormat,ViewDisplayInfo,Shadow,CompleteRoleName,ShowVerbs,ShowCardinality,MethodologyId,StraightRelLine,PageBoundary,ShowViewRelationship,ShowView,HideTrigger,Global_User_ID,Row_Time_Stamp,ShowSchemaObjEdge,ShowSchemaObj,SchemaObjDisplayFormat,ShowRelationshipName,ShowLogicalRelationshipName,ShowTriggerLabel,ShowShape,ShowShapeEdge,ShowShapeName,ShowShapeEdgeName,ShowShapeEdgeVerbs,TransformationDisplayFormat
-1,1,1,1,1,0,0,16381,0,0,-329,-970,2,1,8,3269,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
+1,1,1,1,1,0,0,16381,0,0,-329,-1095,2,1,8,3269,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
 
 GridDisplay
 DiagramId,ModelId,SubmodelId,GridDisplay_ID,Submodel_ID,Show,Snap,HorizontalSpacing,VerticalSpacing,HorizontalGridsPerLine,VericalGridsPerLine,Units,Global_User_ID,Row_Time_Stamp
@@ -347,7 +347,7 @@ DiagramId,ModelId,EntityId,AttributeId,Attribute_ID,Entity_ID,UserDatatypeId,Rul
 1,1,14,3,79,14,0,0,0,0,97,97,0,0,0,0,10,0,18,0,N,1,1,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,354,0
 1,1,10,8,58,10,0,0,0,0,85,85,0,0,0,0,10,0,3,0,N,1,1,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,283,0
 1,1,14,4,80,14,0,0,0,0,102,102,0,0,0,0,10,0,10,2,N,1,1,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,355,0
-1,1,10,9,59,10,0,0,0,0,77,86,0,0,86,86,10,1,10,0,N,0,0,10,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,286,0
+1,1,10,9,59,10,0,0,0,0,77,176,0,0,176,176,10,1,10,0,N,0,0,10,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,286,0
 1,1,14,5,86,14,0,0,0,0,105,105,0,0,105,105,10,0,10,0,N,0,0,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,370,0
 1,1,10,10,73,10,0,0,0,0,72,72,0,0,72,72,10,0,6,0,N,0,0,9,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,331,0
 1,1,14,6,97,14,0,0,0,0,59,59,0,0,59,59,10,0,10,0,N,0,0,5,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,422,0
@@ -732,7 +732,7 @@ DiagramId,ModelId,SubmodelId,ObjectId,GraphicObject_ID,Submodel_ID,GraphicsType,
 1,1,1,46,72,1,2,277,-1160,373,-1143,28312C31290D0A,0,0,0,0,3615,0
 1,1,1,47,73,1,2,189,-1386,285,-1369,28302C3129,0,0,0,0,3616,0
 1,1,1,49,75,1,2,519,-1312,615,-1297,"",0,0,0,0,3618,0
-1,1,1,52,78,1,2,125,-1339,221,-1319,28302C2A29,0,0,0,0,3621,0
+1,1,1,52,78,1,2,125,-1338,220,-1319,28302C2A29,0,0,0,0,3621,0
 1,1,1,55,82,1,2,127,-1263,223,-1247,28302C2A290D0A,0,0,0,0,3741,0
 1,1,1,56,84,1,2,84,-1282,180,-1264,28312C31290D0A,0,0,0,0,3859,0
 1,1,1,57,86,1,2,61,-1212,157,-1197,28302C35290D0A,0,0,0,0,3977,0
@@ -798,6 +798,7 @@ String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
 14,ESPECIFICACIONES_TECNICAS,0,0,0
 175,REFERENCIAS_EMPLEADO,0,0,0
 15,MODELO,0,0,0
+176,JEFE_ID,0,0,0
 21,CAPACIDAD_PASAJEROS_ORDINARIOS,0,0,0
 22,CAPACIDAD_PASAJEROS_VIP,0,0,0
 23,CAPACIDAD_PASAJEROS_DISCAPACITADOS,0,0,0
@@ -1044,10 +1045,10 @@ StringUsage_Id,UniqueObject_Id,StringUsageType_Id,String_Id,Row_Time_Stamp
 162,282,15,83,0
 163,283,14,85,0
 164,283,15,85,0
-165,286,15,86,0
+165,286,15,176,0
 166,286,14,77,0
-167,286,11,86,0
-168,286,95,86,0
+167,286,11,176,0
+168,286,95,176,0
 169,288,1,89,0
 170,288,2,89,0
 171,293,14,90,0
@@ -1510,7 +1511,7 @@ Identity_Value_ID,Table_Name,Column_Name,Next_Valid_Value,Global_User_ID,Row_Tim
 14,Bound_Dictionary_Object,Bound_Dictionary_Object_ID,1,0,0
 15,CheckConstraints,CheckConstraints_ID,1,0,0
 16,Circular_Layout,Circular_Layout_ID,47,0,0
-17,ColorDefault,ColorDefault_ID,2424,0,0
+17,ColorDefault,ColorDefault_ID,2425,0,0
 18,Column_Usage,Column_Usage_ID,1,0,0
 19,Components_Layout,Components_Layout_ID,47,0,0
 20,Configuration_Option,Configuration_Option_ID,1,0,0
