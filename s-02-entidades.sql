@@ -3,8 +3,7 @@
 --@Descripción: Código ddl de las entidades de la bd
 
 
---Recordar que aquí se están ignorando los restricciones de tipo UNIQUE para 
---implementarlas como índices unique
+
 
 
 
@@ -31,7 +30,9 @@ create table aeronave(
   especificaciones_tecnicas blob not null,
   matricula varchar2(10) not null,
   modelo varchar2(40) not null,
-  constraint aeronave_pk primary key(aeronave_id)
+  constraint aeronave_pk primary key(aeronave_id),
+  constraint aeronave_es_comercial_es_carga_chk 
+  check(es_comercial = 1 or es_carga = 1)
 );
 
 --Aeronave_carga
@@ -66,7 +67,8 @@ create table aeronave_comercial(
 create table estado(
   estado_id number(10,0) not null,
   nombre varchar2(20) not null,
-  constraint estado_pk primary key(estado_id)
+  constraint estado_pk primary key(estado_id),
+  constraint estado_nombre_uk unique(nombre)
 );
 
 --vuelo
@@ -97,7 +99,9 @@ create table vuelo(
   constraint vuelo_aeropuerto_destino_aeropuesto_origen_chk 
     check(aeropuerto_origen <> aeropuerto_destino),
   constraint vuelo_fecha_salida_fecha_llegada_chk 
-    check(fecha_salida < fecha_llegada)
+    check(fecha_salida < fecha_llegada),
+  constraint vuelo_es_pasajeros_es_carga_chk 
+    check(es_pasajeros = 1 or es_carga = 1)
 );
 
 
@@ -199,7 +203,8 @@ create table referencias_empleado(
   URL varchar2(1000) not null,
   constraint referencias_empleado_pk primary key(numero,empleado_id),
   constraint referencias_empleado_empleado_id_fk foreign key(empleado_id)
-  references empleado(empleado_id)
+  references empleado(empleado_id),
+  constraint referencias_empleado_URL unique(URL)
 );
 
 
