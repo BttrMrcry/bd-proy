@@ -128,7 +128,7 @@ create table vuelo_ubicacion(
   fecha date not null,
   latitud number(5,2) not null,
   longitud number(5,2) not null,
-  constraint vuelo_ubicacion_pk primary key(numero,vuelo_id),
+  constraint vuelo_ubicacion_pk primary key(vuelo_id,numero),
   constraint vuelo_ubicacion_vuelo_id_fk foreign key(vuelo_id)
   references vuelo(vuelo_id)
 ); 
@@ -201,7 +201,7 @@ create table referencias_empleado(
   numero number(1,0) not null,
   empleado_id number(10,0) not null,
   URL varchar2(1000) not null,
-  constraint referencias_empleado_pk primary key(numero,empleado_id),
+  constraint referencias_empleado_pk primary key(empleado_id,numero),
   constraint referencias_empleado_empleado_id_fk foreign key(empleado_id)
   references empleado(empleado_id),
   constraint referencias_empleado_URL unique(URL)
