@@ -183,7 +183,7 @@ create table empleado(
   ap_materno varchar2(20) not null,
   RFC varchar2(20) not null,
   CURP varchar2(18) not null,
-  foto blob not null,
+  foto blob not null default empty_blob(),
   puesto_id number(6,0) not null,
   jefe_id number(10,0),
   constraint empleado_pk primary key(empleado_id),
@@ -203,8 +203,7 @@ create table referencias_empleado(
   URL varchar2(1000) not null,
   constraint referencias_empleado_pk primary key(empleado_id,numero),
   constraint referencias_empleado_empleado_id_fk foreign key(empleado_id)
-  references empleado(empleado_id),
-  constraint referencias_empleado_URL unique(URL)
+  references empleado(empleado_id)
 );
 
 
@@ -239,7 +238,7 @@ create table pasajero(
 
 create table vuelo_pasajero(
   vuelo_pasajero_id number(10,0) not null,
-  bandera_abordado number(1,0) not null,
+  bandera_abordado number(1,0) not null default 0,
   indicaciones_especiales varchar2(2000) not null,
   numero_asiento varchar2(40) not null,
   pasajero_id number(10,0) not null,
