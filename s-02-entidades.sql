@@ -43,6 +43,7 @@ create table aeronave_carga(
   bodega_alto number(4,0) not null,
   numero_bodegas number(3,0) not null,
   capacidad_carga_tons number(4,0) not null,
+  capacidad_carga_kg number(10,2) generated always as (capacidad_carga_tons/1000) virtual,
   aeropuerto_resguardo number(10,0) not null,
   constraint aeronave_carga_pk primary key(aeronave_id),
   constraint aeronave_carga_aeronave_id foreign key (aeronave_id) 
@@ -57,6 +58,8 @@ create table aeronave_comercial(
   capacidad_pasajeros_ordinarios number(4,0) not null,
   capacidad_pasajeros_vip number(4,0) not null,
   capacidad_pasajeros_discapacitados number(4,0) not null,
+  capacidad_total_pasajeros number(4,0) generated always as 
+  (capacidad_pasajeros_ordinarios + capacidad_pasajeros_discapacitados + capacidad_pasajeros_vip) virtual,
   constraint aeronave_comercial_pk primary key(aeronave_id),
   constraint aeronave_comercial_aeronave_id_fk foreign key(aeronave_id)
   references aeronave(aeronave_id)
@@ -172,6 +175,7 @@ create table puesto(
   nombre varchar2(40) not null,
   descripcion varchar2(500) not null,
   sueldo_mensual number(10,2) not null,
+  sueldo_quincenal number(10,2) generated always as (sueldo_mensual / 2) virtual,
   constraint puesto_pk primary key (puesto_id)
 );
 --empleado
@@ -183,7 +187,7 @@ create table empleado(
   ap_materno varchar2(20) not null,
   RFC varchar2(20) not null,
   CURP varchar2(18) not null,
-  foto blob not null default empty_blob(),
+  foto blob default empty_blob(),
   puesto_id number(6,0) not null,
   jefe_id number(10,0),
   constraint empleado_pk primary key(empleado_id),
@@ -238,7 +242,7 @@ create table pasajero(
 
 create table vuelo_pasajero(
   vuelo_pasajero_id number(10,0) not null,
-  bandera_abordado number(1,0) not null default 0,
+  bandera_abordado number(1,0) default 0,
   indicaciones_especiales varchar2(2000) not null,
   numero_asiento varchar2(40) not null,
   pasajero_id number(10,0) not null,
