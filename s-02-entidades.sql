@@ -19,7 +19,8 @@ create table aeropuerto(
   latitud number(5,2) not null,
   longitud number(5,2) not null,
   bandera_activo number(1,0) not null,
-  constraint aeropuerto_pk primary key(aeropuerto_id)
+  constraint aeropuerto_pk primary key(aeropuerto_id),
+  constraint aeropuerto_clave_uk unique(clave)
 );
 
 --Aeronave
@@ -32,7 +33,8 @@ create table aeronave(
   modelo varchar2(40) not null,
   constraint aeronave_pk primary key(aeronave_id),
   constraint aeronave_es_comercial_es_carga_chk 
-  check(es_comercial = 1 or es_carga = 1)
+  check(es_comercial = 1 or es_carga = 1),
+  constraint aeronave_matricula_uk unique(matricula)
 );
 
 --Aeronave_carga
@@ -104,7 +106,8 @@ create table vuelo(
   constraint vuelo_fecha_salida_fecha_llegada_chk 
     check(fecha_salida < fecha_llegada),
   constraint vuelo_es_pasajeros_es_carga_chk 
-    check(es_pasajeros = 1 or es_carga = 1)
+    check(es_pasajeros = 1 or es_carga = 1),
+    constraint vuelo_numero_vuelo_uk unique(numero_vuelo)
 );
 
 
@@ -142,7 +145,8 @@ create table tipo_paquete(
   clave varchar2(20) not null,
   descripcion varchar2(500) not null,
   indicaciones_generales varchar2(1000) not null,
-  constraint tipo_paquete_pk primary key(tipo_paquete_id) 
+  constraint tipo_paquete_pk primary key(tipo_paquete_id),
+  constraint tipo_paquete_clave unique(clave) 
 );
 
 --Paquete 
@@ -157,7 +161,8 @@ create table paquete(
   constraint paquete_tipo_paquete_id_fk foreign key(tipo_paquete_id)
   references tipo_paquete(tipo_paquete_id),
   constraint paquete_vuelo_id_fk foreign key(vuelo_id)
-  references vuelo(vuelo_id)
+  references vuelo(vuelo_id),
+  constraint paquete_folio_uk unique(folio)
 );
 
 --Rol empleado 
@@ -185,8 +190,8 @@ create table empleado(
   nombre varchar2(20) not null,
   ap_paterno varchar2(20) not null,
   ap_materno varchar2(20) not null,
-  RFC varchar2(20) not null,
-  CURP varchar2(18) not null,
+  rfc varchar2(20) not null,
+  curp varchar2(18) not null,
   foto blob default empty_blob(),
   puesto_id number(6,0) not null,
   jefe_id number(10,0),
@@ -194,7 +199,9 @@ create table empleado(
   constraint empleado_puesto_id_fk foreign key(puesto_id)
   references puesto(puesto_id),
   constraint empleado_jefe_fk foreign key(jefe_id)
-  references empleado(empleado_id)
+  references empleado(empleado_id),
+  constraint empleado_rfc_uk unique(rfc),
+  constraint empleado_curp_uk unique(curp)
 );
 
 
@@ -234,8 +241,10 @@ create table pasajero(
   ap_materno varchar2(40),
   email varchar2(300),
   fecha_nacimiento date not null,
-  CURP varchar2(18) not null,
-  constraint pasajero_pk primary key(pasajero_id)
+  curp varchar2(18) not null,
+  constraint pasajero_pk primary key(pasajero_id),
+  constraint pasajero_email_uk unique(email),
+  constraint pasajero_curp_uk unique(curp)
 );
 
 --Tabla vuelo_pasajero
@@ -263,7 +272,8 @@ create table pase_abordaje(
   vuelo_pasajero_id number(10,0) not null,
   constraint pase_abordaje_pk primary key(pase_abordaje_id),
   constraint pase_abordaje_vuelo_pasajero_id_fk foreign key(vuelo_pasajero_id)
-  references vuelo_pasajero(vuelo_pasajero_id)
+  references vuelo_pasajero(vuelo_pasajero_id),
+  constraint pase_abordaje_folio_uk unique(folio)
 );
 
 --tabla equipaje
