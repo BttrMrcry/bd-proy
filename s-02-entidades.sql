@@ -1,4 +1,4 @@
---@Autor(es): López Becerra Ricardo, Martinez Reyes Javier
+--@Autor(es): López Becerra Ricardo
 --@Fecha creación: 27/12/2021
 --@Descripción: Código ddl de las entidades de la bd
 
@@ -8,8 +8,8 @@
 
 
 prompt conectando con el usuario administrador
-connect lm_proy_admin/contrasenia
-
+connect l_proy_admin/contrasenia
+show user
 
 --Aeropuerto
 create table aeropuerto(
@@ -260,7 +260,8 @@ create table vuelo_pasajero(
   constraint vuelo_pasajero_pasajero_id_fk foreign key(pasajero_id)
   references pasajero(pasajero_id),
   constraint vuelo_pasajero_vuelo_id foreign key(vuelo_id)
-  references vuelo(vuelo_id)
+  references vuelo(vuelo_id),
+  constraint vuelo_pasajero_pasajero_id_vuelo_id_uk  unique(pasajero_id,vuelo_id)
 );
 
 --Tabla pase_abordaje
@@ -273,7 +274,8 @@ create table pase_abordaje(
   constraint pase_abordaje_pk primary key(pase_abordaje_id),
   constraint pase_abordaje_vuelo_pasajero_id_fk foreign key(vuelo_pasajero_id)
   references vuelo_pasajero(vuelo_pasajero_id),
-  constraint pase_abordaje_folio_uk unique(folio)
+  constraint pase_abordaje_folio_uk unique(folio),
+  constraint pase_abordaje_vuelo_pasajero_id_uk unique(vuelo_pasajero_id)
 );
 
 --tabla equipaje
