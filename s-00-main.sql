@@ -17,4 +17,9 @@ prompt ejecutando script s-03-tablas-temporales
 prompt ejecutando script s-05-secuencias
 @s-05-secuencias.sql
 
+prompt ejecutando script s-06-indices
+@s-06-indices.sql
 
+
+prompt ejecutando script s-07-sinonimos
+@s-07-sinonimos.sql
