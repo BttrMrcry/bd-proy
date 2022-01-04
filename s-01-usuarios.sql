@@ -50,7 +50,8 @@ end;
 PROMPT crando roles...
 
 create role rol_admin;
-grant create session, create table, create view, create sequence, create procedure
+grant create session, create table, create view, create sequence, 
+  create procedure,create synonym ,create public synonym 
 to rol_admin;
 
 create role rol_invitado;
@@ -65,6 +66,10 @@ create user l_proy_invitado identified by contrasenia;
 prompt asignando roles a los usuarios...
 grant rol_admin to l_proy_admin;
 grant rol_invitado to l_proy_invitado;
+
+--necesario para la creación de sinónimos público con l_proy_admin
+prompt asignando permisos adicionales a l_proy_invitado 
+grant create synonym to l_proy_invitado; 
 
 prompt script completado con exito!
 whenever sqlerror continue none;
