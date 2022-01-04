@@ -69,11 +69,11 @@ create table aeronave_comercial(
 
 --Estado
 
-create table estado(
-  estado_id number(10,0) not null,
+create table status_vuelo(
+  status_vuelo_id number(10,0) not null,
   nombre varchar2(20) not null,
-  constraint estado_pk primary key(estado_id),
-  constraint estado_nombre_uk unique(nombre)
+  constraint  status_vuelo_pk primary key(status_vuelo_id),
+  constraint status_vuelo_nombre_uk unique(nombre)
 );
 
 --vuelo
@@ -91,7 +91,7 @@ create table vuelo(
   aeropuerto_destino number(10,0) not null,
   aeropuerto_origen number(10,0) not null,
   aeronave_id number(10,0) not null,
-  estado_id number(10,0) not null,
+  status_vuelo_id number(10,0) not null,
   constraint vuelo_pk primary key(vuelo_id),
   constraint vuelo_aeropuerto_destino_fk foreign key(aeropuerto_destino)
   references aeropuerto(aeropuerto_id),
@@ -99,8 +99,8 @@ create table vuelo(
   references aeropuerto(aeropuerto_id),
   constraint vuelo_aeronave_id_fk foreign key(aeronave_id) 
   references aeronave(aeronave_id),
-  constraint vuelo_estado_id_fk foreign key(estado_id)
-  references estado(estado_id),
+  constraint vuelo_status_vuelo_id_fk foreign key(status_vuelo_id)
+  references status_vuelo(status_vuelo_id),
   constraint vuelo_aeropuerto_destino_aeropuesto_origen_chk 
     check(aeropuerto_origen <> aeropuerto_destino),
   constraint vuelo_fecha_salida_fecha_llegada_chk 
@@ -114,15 +114,15 @@ create table vuelo(
 
 --Historial_estado
 prompt creando historial_estado
-create table historial_estado(
-  historial_estado_id number(10,0) not null,
+create table historico_status_vuelo(
+  historico_status_vuelo_id number(10,0) not null,
   fecha date not null,
-  estado_id number(10,0) not null,
+  status_vuelo_id number(10,0) not null,
   vuelo_id number(10,0) not null,
-  constraint historial_estado_pk primary key(historial_estado_id),
-  constraint historial_estado_estado_id foreign key(estado_id)
-    references estado(estado_id),
-  constraint historial_estado_vuelo_id foreign key(vuelo_id)
+  constraint historico_status_vuelo_pk primary key(historico_status_vuelo_id),
+  constraint historico_status_vuelo_status_vuelo_id_fk foreign key(status_vuelo_id)
+    references status_vuelo(status_vuelo_id),
+  constraint historico_status_vuelo_id_fk foreign key(vuelo_id)
     references vuelo(vuelo_id)
 );
 
