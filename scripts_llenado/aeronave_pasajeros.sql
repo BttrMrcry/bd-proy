@@ -1,0 +1,10 @@
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'AALM9VXPGK', 'OA-9041');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'DYRNWS2OPP', 'PU-3708');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'ZP83HP8NWZ', 'MS-5873');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'O3M61ZHAN9', 'PJ-2950');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'R8XGTZ9ON7', 'IU-5216');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'B09Q7B66HA', 'KJ-6021');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'OOPN1DLBHK', 'ND-7919');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'AEDAEIMEEZ', 'LO-6635');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'OQ6XXU9TY4', 'OU-4323');
+insert into aeronave (aeronave_id, es_comercial, es_carga, especificaciones_tecnicas, matricula, modelo) values (seq_aeronave.nextval, 1, 0, empty_blob(), 'FQ383SXBC2', 'RL-4063');

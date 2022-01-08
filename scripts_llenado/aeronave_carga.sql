@@ -1,0 +1,10 @@
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (11, 6, 2, 10, 2, 54, 31);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (12, 4, 42, 9, 5, 3, 45);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (13, 8, 12, 5, 1, 19, 69);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (14, 8, 24, 12, 3, 96, 37);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (15, 10, 26, 9, 1, 10, 98);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (16, 6, 3, 10, 5, 42, 92);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (17, 10, 20, 10, 4, 97, 23);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (18, 6, 17, 2, 3, 6, 8);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (19, 4, 50, 13, 2, 97, 2);
+insert into aeronave_carga (aeronave_id, bodega_ancho, bodega_profundidad, bodega_alto, numero_bodegas, capacidad_carga_tons, aeropuerto_resguardo) values (20, 10, 12, 15, 3, 41, 16);
