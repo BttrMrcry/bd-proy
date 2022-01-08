@@ -66,13 +66,13 @@ create sequence seq_paquete
     nocycle
     cache 10;
 
-create sequence seq_estado
+create sequence seq_status_vuelo
     start with 1
     increment by 1
     nocycle
     nocache;
 
-create sequence seq_historial_estado
+create sequence seq_historico_status_vuelo
     start with 1
     increment by 1
     nocycle
