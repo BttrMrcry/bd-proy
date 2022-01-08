@@ -23,3 +23,9 @@ prompt ejecutando script s-06-indices
 
 prompt ejecutando script s-07-sinonimos
 @s-07-sinonimos.sql
+
+prompt ejecutando script s-08-vistas
+@s-08-vistas.sql  
+
+prompt ejecutando script s-09-carga-inicial 
+@s-09-carga-inicial.sql
