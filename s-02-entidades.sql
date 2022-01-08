@@ -252,8 +252,8 @@ create table pasajero(
 create table vuelo_pasajero(
   vuelo_pasajero_id number(10,0) not null,
   bandera_abordado number(1,0) default 0,
-  indicaciones_especiales varchar2(2000) not null,
-  numero_asiento varchar2(40) not null,
+  indicaciones_especiales varchar2(2000),
+  numero_asiento number(3,0) not null,
   pasajero_id number(10,0) not null,
   vuelo_id number(10,0) not null,
   constraint vuelo_pasajero_pk primary key(vuelo_pasajero_id),
