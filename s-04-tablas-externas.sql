@@ -21,7 +21,7 @@ prompt Contectando con usuario l_proy_admin para crear la tabla externa
 connect l_proy_admin/contrasenia
 show user
 prompt creando tabla externa
-create table equipaje_estupefacientes(
+create table drugs(
   equipaje_id number(10,0),
   sustancia varchar2(20),
   cantidad_encontrada_kg number(10,4),
@@ -44,10 +44,22 @@ organization external (
       fecha_incautacion date mask "dd/mm/yyyy"
     )
   )
-  location ('equipaje_estupefacientes.csv')
+  location ('drugs.csv')
 )
 reject limit unlimited;
 
 prompt creando el directorio /tmp/bases en caso de no existir
 !mkdir -p /tmp/bases
 
+prompt cambiando los permisos de /tmp/bases 
+!chmod 777 /tmp/bases
+
+prompt Copiando el archivo csv a /tmp/bases 
+!cp /home/ricardolb/sql/bd-proy/scripts_llenado/drugs.csv /tmp/bases
+
+
+prompt mostrando los datos 
+ 
+ col sustancia format a20
+
+ select * from drugs;
