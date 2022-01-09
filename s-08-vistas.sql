@@ -21,7 +21,7 @@ create or replace view v_vuelo_numero_paquete(
     group by v.numero_vuelo,sv.nombre;
 
 
---Vista con que para cada vuelo de pasajeros programado para ese día 
+--Vista con que para cada vuelo de pasajeros programado
 --  muestra su número de vuelo, su origen, su destino y 
 -- la cantidad de asientos libres totales
 
