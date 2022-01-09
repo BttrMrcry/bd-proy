@@ -1,3 +1,7 @@
+--@Autor(es): López Becerra Ricardo
+--@Fecha creación: 07/01/2022
+--@Descripción: Código para cargar datos iniciales a la bd
+
 
 prompt conectando con el usaurio administrador
 connect l_proy_admin/contrasenia 
@@ -150,3 +154,4 @@ prompt LLenando tripulacion
 @scripts_llenado/tripulacion_sobrecargos.sql 
 @scripts_llenado/tripulacion_tecnicos.sql
 
+commit;
