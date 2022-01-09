@@ -13,8 +13,6 @@ show user
 
 create global temporary table reporte_pasajeros_estupefacientes 
   on commit preserve rows as
-  select * 
-  from(    
     select 
       p.nombre as nombre_sospechoso, 
       p.ap_paterno,
@@ -24,25 +22,25 @@ create global temporary table reporte_pasajeros_estupefacientes
       v.numero_vuelo,
       ao.nombre as aeropuerto_origen,
       ad.nombre as aeropuerto_destino,
-      ee.sustancia,
-      ee.cantidad_encontrada_kg
-    from pasajero p, aeropuerto ao, aeropuerto ad, equipaje_estupefacientes ee,
+      d.sustancia,
+      d.cantidad_encontrada_kg
+    from pasajero p, aeropuerto ao, aeropuerto ad, drugs d,
       vuelo_pasajero vp, vuelo v, pase_abordaje pa, equipaje e
-    where ee.equipaje_id = e.equipaje_id
+    where d.equipaje_id = e.equipaje_id
       and pa.pase_abordaje_id = e.pase_abordaje_id
       and vp.vuelo_pasajero_id = pa.vuelo_pasajero_id
       and p.pasajero_id = vp.pasajero_id
       and v.vuelo_id = vp.vuelo_id
       and ao.aeropuerto_id = v.aeropuerto_origen
-      and ad.aeropuerto_id = v.aeropuerto_destino
-  ) m,
-  (
-    select count(*), avg(cantidad_encontrada_kg)
-      from equipaje_estupefacientes
-      group by sustancia
-  ) s;
+      and ad.aeropuerto_id = v.aeropuerto_destino;
   
 
 
-
+column nombre_sospechoso format a20
+column ap_paterno format a20
+column ap_materno format a20 
+column curp format a18 
+column aeropuerto_origen format a20 
+column aeropuerto_destino format a20
+column sustancia format a20 
             
