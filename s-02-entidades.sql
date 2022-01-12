@@ -128,6 +128,7 @@ create table historico_status_vuelo(
 
 --vuelo_ubicacion
 prompt creando vuelo_ubicacion
+
 create table vuelo_ubicacion(
   numero number(5,0) not null,
   vuelo_id number(10,0) not null,
@@ -259,9 +260,10 @@ create table vuelo_pasajero(
   constraint vuelo_pasajero_pk primary key(vuelo_pasajero_id),
   constraint vuelo_pasajero_pasajero_id_fk foreign key(pasajero_id)
   references pasajero(pasajero_id),
-  constraint vuelo_pasajero_vuelo_id foreign key(vuelo_id)
+  constraint vuelo_pasajero_vuelo_id_fk foreign key(vuelo_id)
   references vuelo(vuelo_id),
-  constraint vuelo_pasajero_pasajero_id_vuelo_id_uk  unique(pasajero_id,vuelo_id)
+  constraint vuelo_pasajero_pasajero_id_vuelo_id_uk  unique(pasajero_id,vuelo_id),
+  constraint vuelo_pasajero_vuelo_id_nuemero_asiento_uk unique(vuelo_id,numero_asiento)
 );
 
 --Tabla pase_abordaje
