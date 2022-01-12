@@ -11,8 +11,8 @@
 connect l_proy_admin/contrasenia
 show user
 
-create global temporary table reporte_pasajeros_estupefacientes 
-  on commit preserve rows as
+create private temporary table ora$ptt_reporte_pasajeros_estupefacientes 
+  on commit drop definition as
     select 
       p.nombre as nombre_sospechoso, 
       p.ap_paterno,
@@ -35,7 +35,7 @@ create global temporary table reporte_pasajeros_estupefacientes
       and ad.aeropuerto_id = v.aeropuerto_destino;
   
 
-
+set linesize window
 column nombre_sospechoso format a20
 column ap_paterno format a20
 column ap_materno format a20 
@@ -43,4 +43,5 @@ column curp format a18
 column aeropuerto_origen format a20 
 column aeropuerto_destino format a20
 column sustancia format a20 
-            
+
+select * from ora$ptt_reporte_pasajeros_estupefacientes;
