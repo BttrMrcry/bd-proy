@@ -25,7 +25,7 @@ create index empleado_ap_paterno_ix on empleado(lower(ap_paterno));
 
 create index empleado_ap_materno_ix on empleado(lower(ap_materno));
 
-create unique index vuelo_aeropuerto_origen_aeropuerto_destino_iuk 
+create index vuelo_aeropuerto_origen_aeropuerto_destino_iuk 
 on vuelo(aeropuerto_origen,aeropuerto_destino);
 --Indices para mejorar el desempeño de joins 
 
