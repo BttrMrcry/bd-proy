@@ -51,7 +51,7 @@ PROMPT crando roles...
 
 create role rol_admin;
 grant create session, create table, create view, create sequence, 
-  create procedure,create synonym ,create public synonym 
+  create procedure, create trigger,create synonym ,create public synonym 
 to rol_admin;
 
 create role rol_invitado;
