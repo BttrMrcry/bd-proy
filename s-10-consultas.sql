@@ -94,10 +94,9 @@ create table consulta_7 as
 select numero_vuelo from xx_vuelo 
 where es_carga = 1;
 
---Consulta en una tabla temporal (Generalmente no muestra nada ya que 
---la sesión en la que se crea la tabla no es la misma que en la que se consulta)
-create table consulta_8 as
-select * from reporte_pasajeros_estupefacientes;
+-- La tabla es temporal privada. A este punto ya se eliminó
+-- create table consulta_8 as
+-- select * from ora$ptt_reporte_pasajeros_estupefacientes;
 
 --Consulta en una tabla externa
 create table consulta_9 as

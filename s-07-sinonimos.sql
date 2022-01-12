@@ -52,23 +52,23 @@ show user
 --sinónimos privados con el prefijo XX_
 set serveroutput on 
 declare
-    v_prefijo varchar2(3) := 'XX_';
-    v_nombre_sinonimo varchar2(200);
-    v_instruccion varchar2(1000);
-    v_nombre_tabla varchar2(200);
-    cursor cur_tablas_l_proy_admin is 
-    select table_name from user_tables; 
+  v_prefijo varchar2(3) := 'XX_';
+  v_nombre_sinonimo varchar2(200);
+  v_instruccion varchar2(1000);
+  v_nombre_tabla varchar2(200);
+  cursor cur_tablas_l_proy_admin is 
+  select table_name from user_tables; 
 begin
     for r in cur_tablas_l_proy_admin loop
-        v_nombre_tabla := r.table_name;
-        v_nombre_sinonimo := v_prefijo || v_nombre_tabla;
-        v_instruccion := 'create or replace synonym ';
-        v_instruccion := v_instruccion || v_nombre_sinonimo;
-        v_instruccion := v_instruccion || ' for ';
-        v_instruccion := v_instruccion || v_nombre_tabla;
+      v_nombre_tabla := r.table_name;
+      v_nombre_sinonimo := v_prefijo || v_nombre_tabla;
+      v_instruccion := 'create or replace synonym ';
+      v_instruccion := v_instruccion || v_nombre_sinonimo;
+      v_instruccion := v_instruccion || ' for ';
+      v_instruccion := v_instruccion || v_nombre_tabla;
         
-        dbms_output.put_line('Ejecutando: '||v_instruccion);
-        execute immediate v_instruccion;
+      dbms_output.put_line('Ejecutando: '||v_instruccion);
+      execute immediate v_instruccion;
     end loop;
 end;
 /
