@@ -87,12 +87,12 @@ end;
 /
 @s-10-consultas.sql
 
-prompt ejecutando script s-11-tr-exporta-elimimacion
+prompt ejecutando script s-11-tr-exporta-eliminacion
 begin
 dbms_session.sleep(2);
 end;
 /
-@s-11-tr-exporta-elimimacion.sql 
+@s-11-tr-exporta-eliminacion.sql 
 
 prompt ejecutando s-11-tr-verifica-aeronave
 begin
@@ -128,6 +128,14 @@ dbms_session.sleep(2);
 end;
 /
 @s-15-fx-carga-bin.sql 
+
+prompt ejecutando s-15-fx-ping 
+begin
+dbms_session.sleep(2);
+end;
+/
+@s-15-fx-ping.sql
+
 
 prompt ejecutando s-17-lob-carga-fotos-empleados
 begin
