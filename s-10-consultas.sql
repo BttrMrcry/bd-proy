@@ -2,24 +2,26 @@
 --@Fecha creación: 02/01/2022
 --@Descripción: Código para realizar las consultas requeridas
 
-
+connect l_proy_admin/contrasenia
 --Matricula del avión, numero de vuelo y fecha de salida en caso de que se haya 
 --utilizado en algún vuelo durante enero de 2022
 --outer join
+create table consulta_1 as
 select a.matricula, v.numero_vuelo, v.fecha_salida
 from aeronave a left join vuelo v 
 on a.aeronave_id = v.aeronave_id
-and fecha_salida >= to_date('01/01/2022')
-and fecha_salida < to_date('01/02/2022'); 
+and fecha_salida >= to_date('01/01/2022','dd/mm/yyyy')
+and fecha_salida < to_date('01/02/2022','dd/mm/yyyy'); 
 
 
 --Nombre apellido paterno y puesto de todos los empleados y 
 --el RFC  de sus jefes
 --inner join, natural join 
+create table consulta_2 as
 select 
   e.nombre, 
   e.ap_paterno, 
-  p.nombre, 
+  p.nombre as puesto,
   j.rfc rfc_jefe
 from empleado e join 
   puesto p using(puesto_id)
@@ -30,7 +32,8 @@ from empleado e join
 --mostrar la matricula de cada avion y el número de vuelos 
 --realizados par esa unidad si son menores de 10
 -- funciones de agregación
-select a.matricula, count(*)
+create table consulta_3 as
+select a.matricula, count(*) vuelo_realizados
 from aeronave a join vuelo v
     using(aeronave_id)
 group by a.matricula
@@ -41,6 +44,7 @@ having count(*) < 3;
 --edad menor a 10 años que hayan viajado más de dos veces, menos
 --los que hayan perdido algún vuelo alguna vez
 --Algebra relacional
+create table consulta_4 as
 select p.nombre, p.ap_paterno 
 from pasajero p
 where trunc((sysdate-p.fecha_nacimiento)/365) < 10
@@ -67,6 +71,7 @@ where vp.bandera_abordado = 0;
 
 --Número de vuelo, su estado y el número de vuelos en ese mismo estado
 -- Subconsultas
+create table consulta_5 as
 select v.numero_vuelo, sv.nombre, co.numero_vuelos_estado
 from vuelo v, status_vuelo sv,
 (
@@ -79,19 +84,23 @@ and sv.status_vuelo_id = co.status_vuelo_id;
 
 
 --Consulta en una vista 
+create table consulta_6 as
 select * from v_vuelo_acientos_libres
 where asientos_libres < 70;
 
 
 --Consulta utilizando un sinónimo 
+create table consulta_7 as
 select numero_vuelo from xx_vuelo 
 where es_carga = 1;
 
 --Consulta en una tabla temporal (Generalmente no muestra nada ya que 
 --la sesión en la que se crea la tabla no es la misma que en la que se consulta)
+create table consulta_8 as
 select * from reporte_pasajeros_estupefacientes;
 
 --Consulta en una tabla externa
+create table consulta_9 as
 select * from drugs
 where cantidad_encontrada_kg < 1;
 
